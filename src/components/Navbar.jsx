@@ -16,7 +16,7 @@ const Navbar = () => {
   } = useAppContext();
   const logout = async () => {
     setUser(null);
-    navigate("/");
+    navigate("/GreenCart/");
   };
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const Navbar = () => {
 
       {/* Desktop Menu */}
       <div className="hidden sm:flex items-center gap-8">
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/GreenCart/">Home</NavLink>
         <NavLink to="/products">All Product</NavLink>
         <NavLink to="/">Contact</NavLink>
 
