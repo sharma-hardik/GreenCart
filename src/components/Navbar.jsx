@@ -16,7 +16,7 @@ const Navbar = () => {
   } = useAppContext();
   const logout = async () => {
     setUser(null);
-    navigate("/GreenCart/");
+    navigate("/GreenCart");
   };
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
-      <NavLink to="/" onClick={() => setOpen(false)}>
+      <NavLink to="/GreenCart" onClick={() => setOpen(false)}>
         <img className="h-9" src={assets.logo} alt="logo" />
       </NavLink>
 
@@ -120,7 +120,7 @@ const Navbar = () => {
           } absolute z-50 top-14.5 left-0 w-full bg-white shadow-md py-4 flex flex-col items-start gap-4 px-5 md:hidden`}
         >
           <div className="flex flex-col gap-4 md:hidden">
-            <NavLink to="/" onClick={() => setOpen(false)} className="">
+            <NavLink to="/GreenCart" onClick={() => setOpen(false)} className="">
               Home
             </NavLink>
             <NavLink to="/products" onClick={() => setOpen(false)}>
